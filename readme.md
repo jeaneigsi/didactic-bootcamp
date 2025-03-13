@@ -13,10 +13,14 @@ Les contraintes seront :
 - Bilingue
 
 Stack :  
-- Django    
+- [Django REST Framework](https://docs.djangoproject.com/en/5.1/topics/auth/customizing/#:~:text=AbstractUser%3A) 
 - Postgres sql en bdd
 - tailwinds / css possible vue js 
+- [unfold](https://unfoldadmin.com/docs/installation/auth/)
 
+package manager :  
+- uv pour python
+- bun pour vuejs
 ## Aspect techniques
 
 Frontend :  
