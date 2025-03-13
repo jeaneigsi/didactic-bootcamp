@@ -14,7 +14,7 @@ dist-ssr
 /.python-version
 /.venv
 
-/intermediaire/*
+intermediaire/*
 .python-version
 module/__pycache__/*
 
