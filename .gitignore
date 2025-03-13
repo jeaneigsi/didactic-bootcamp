@@ -16,7 +16,7 @@ dist-ssr
 
 /intermediaire/*
 .python-version
-.module/__pycache__/*
+module/__pycache__/*
 
 
 ./
