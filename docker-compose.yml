@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: db.sqlite3
+      POSTGRES_USER: jean
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432"

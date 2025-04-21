@@ -23,6 +23,6 @@ router.register(r'panieritems', PanierItemViewSet)
 # Liste les URLs enregistrées dans le routeur
 urlpatterns = [
     path('', include(router.urls)),
-    # path('api-token-auth/', CustomAuthToken.as_view(), name='api_token_auth'),
+    path('auth/', CustomAuthToken.as_view(), name='api_token_auth'),
     
 ]

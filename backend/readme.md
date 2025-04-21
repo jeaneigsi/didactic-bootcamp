@@ -50,3 +50,5 @@
   Une parcelle est associée à un quartier (ou une ville) de Casablanca.
 - **User ↔ Parcelle (Favoris)** :  
   Relation many-to-many pour la sauvegarde des annonces.
+
+## {"token":"dcf014b14214c215304330c04229991e4b3990f6","user_id":2,"email":""}

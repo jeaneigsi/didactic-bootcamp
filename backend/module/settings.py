@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import corsheaders
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,10 +29,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Configuration CORS
+CORS_ALLOW_ALL_ORIGINS = True  # Simplifier pour le développement, à restreindre en production
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,11 +50,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'annonces',
     'rest_framework',
-    # 'rest_framework.authtoken',  
+    'rest_framework.authtoken',
+      
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+      
 ]
 
 ROOT_URLCONF = 'module.urls'

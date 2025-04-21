@@ -1,0 +1,44 @@
+name: Django CI/CD with pytest
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: jean
+          POSTGRES_PASSWORD: 123
+          POSTGRES_DB: your_db_name
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build Docker images
+      run: docker-compose build
+
+    - name: Run migrations
+      run: docker-compose run web python manage.py migrate
+
+    - name: Run pytest
+      run: docker-compose run web pytest --cov=. --cov-report=xml
+
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: true

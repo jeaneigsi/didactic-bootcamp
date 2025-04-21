@@ -1,0 +1,11 @@
+email,firstname,lastname,role,ville,parcelle_nom,prix,categorie,description,favoris_parcelle,panier_parcelle
+user1@example.com,John,Doe,User,Paris,Parcelle1,150000,Residentiel,"Une belle parcelle résidentielle.",Parcelle1,Parcelle1
+user2@example.com,Jane,Smith,User,Lyon,Parcelle2,200000,Industriel,"Terrain industriel à proximité des transports.",Parcelle2,Parcelle2
+user3@example.com,Michael,Brown,User,Marseille,Parcelle3,250000,Nue,"Parcelle nue avec potentiel de développement.",Parcelle3,Parcelle3
+user4@example.com,Emily,Davis,Admin,Toulouse,Parcelle4,300000,Residentiel,"Terrain résidentiel avec vue.",Parcelle4,Parcelle4
+user5@example.com,James,Wilson,User,Bordeaux,Parcelle5,120000,Industriel,"Parcelle pour industrie lourde.",Parcelle5,Parcelle5
+user6@example.com,Linda,Moore,Admin,Nice,Parcelle6,180000,Residentiel,"Terrain pour construction de maisons.",Parcelle6,Parcelle6
+user7@example.com,David,Martinez,User,Paris,Parcelle7,220000,Nue,"Parcelle nue dans un quartier en expansion.",Parcelle7,Parcelle7
+user8@example.com,Susan,Garcia,User,Lille,Parcelle8,160000,Industriel,"Terrain industriel proche du centre-ville.",Parcelle8,Parcelle8
+user9@example.com,Robert,Martinez,Admin,Nice,Parcelle9,270000,Residentiel,"Parcelle idéale pour maisons de luxe.",Parcelle9,Parcelle9
+user10@example.com,Patricia,Jackson,User,Lyon,Parcelle10,210000,Nue,"Parcelle nue, bon investissement.",Parcelle10,Parcelle10
